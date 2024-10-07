@@ -1,35 +1,24 @@
-import '../styles/components/Main.scss';
-import CurrentWeather from './CurrentWeather';
-import Forecast from './Forecast';
-import { useContext } from 'react';
-import WeatherContext from '../context/weather.context';
-import Loader from './Loader';
-
+import "../styles/components/Main.scss";
+import CurrentWeather from "./CurrentWeather";
+import Forecast from "./Forecast";
+import Place from "./Place";
+import { getDailyForecast } from "../api";
+import { getHourlyForecast } from "../api";
 function Main() {
-  const { loading, currentWeather, dailyForecast, hourlyForecast } =
-    useContext(WeatherContext);
-
   return (
-    <div className='Main'>
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <CurrentWeather data={currentWeather} />
-          <Forecast
-            type='hourly'
-            title='HOURLY FORECAST'
-            data={hourlyForecast}
-          />
-          <Forecast
-            type='dail'
-            title='21 DAYS FORECAST'
-            data={dailyForecast}
-          />
-        </>
-      )}
+    <div className="Main">
+      <CurrentWeather />
+      <Forecast
+        type="hourly"
+        title="HOURLY FORECAST"
+        data={getHourlyForecast()}
+      />
+      <Forecast
+        type="dail"
+        title="21 DAYS FORECAST"
+        data={getDailyForecast()}
+      />
     </div>
   );
 }
-
 export default Main;
