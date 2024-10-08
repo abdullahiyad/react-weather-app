@@ -6,8 +6,6 @@ function HorizontallyScrollable({ children, className = "" }) {
   const handleMouseDown = (evt) => {
     const oldX = evt.pageX;
     const scrollLeft = scrollRef.current.scrollLeft;
-    console.log("oldx=", oldX);
-    console.log("scroll left=", scrollLeft);
 
     const handleMouseMove = (evt) => {
       const newX = evt.pageX;

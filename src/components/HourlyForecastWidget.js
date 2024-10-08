@@ -1,4 +1,3 @@
-import HorizontallyScrollable from "./HorizontallyScrollable";
 import WeatherIcon from "./WeatherIcon";
 
 function HourlyForecastWidget({ data }) {
@@ -40,7 +39,7 @@ function HourlyForecastWidget({ data }) {
       : "";
 
   return (
-    <HorizontallyScrollable className="widget">
+    <div className="widget">
       <div className="day">{weather_date.day}</div>
       <div className="time">{weather_date.time}</div>
       <div className="icon-temp">
@@ -61,7 +60,7 @@ function HourlyForecastWidget({ data }) {
           <i className="bi bi-send-fill"></i>
         </div>
       </div>
-    </HorizontallyScrollable>
+    </div>
   );
 }
 export default HourlyForecastWidget;
