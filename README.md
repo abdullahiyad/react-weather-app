@@ -1,7 +1,6 @@
 # ReactJS Weather App
 
-Welcome to the ReactJS Weather App project! This application was built as part of a tutorial on my YouTube channel, [Code Explained](https://www.youtube.com/@CodeExplained). In this project, we will create a weather app using ReactJS and the Meteosource Weather API.
-
+Welcome to the ReactJS Weather App project! .
 
 ## Table of Contents
 
